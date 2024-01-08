@@ -10,13 +10,15 @@ View(data)
 #subset the data by only Hispanic and white non-Hispanic
 dataHispanic <- subset(data, Ethnicity == "Hispanic")
 dataWhite <- subset(data, Ethnicity == "White not Hispanic")
-#Plot the subsetted dat
+
+#Plot the subsetted data
 barplot(dataHispanic$Expenditures,
         xlab = "Hispanic",
         ylab = "Expenditures")
 barplot(dataWhite$Expenditures,
         xlab = "White not Hispanic",
         ylab = "Expenditures")
+
 #Subset the data by Age Group
 data1 <- subset(data, Age.Group == "0 to 5")
 data2 <- subset(data, Age.Group == "6 to 12")
@@ -24,6 +26,7 @@ data3 <- subset(data, Age.Group == "13 to 17")
 data4 <- subset(data, Age.Group == "18 to 21")
 data5 <- subset(data, Age.Group == "22 to 50")
 data6 <- subset(data, Age.Group == "51+")
+
 #Create side-by-side boxplots of the Expenditures by Ethnicity for each of the Age Groups.
 boxplot(data1$Expenditures ~ data1$Ethnicity,
         xlab = "Ethnicity for Age Groups: 0-5",
@@ -43,7 +46,7 @@ boxplot(data5$Expenditures ~ data5$Ethnicity,
 boxplot(data6$Expenditures ~ data6$Ethnicity,
         xlab = "Ethnicity for Age Groups: 51+",
         ylab = "Expenditures")
-25
+
 #Subset your data by Gender
 dataM1 <- subset(data1, Gender == "Male")
 dataM2 <- subset(data2, Gender == "Male")
@@ -64,6 +67,7 @@ barplot(dataM3$Expenditures, xlab = "Males Age Groups: 13-17", ylab = "Expenditu
 barplot(dataM4$Expenditures, xlab = "Males Age Groups: 18-21", ylab = "Expenditures")
 barplot(dataM5$Expenditures, xlab = "Males Age Groups: 22-50", ylab = "Expenditures")
 barplot(dataM6$Expenditures, xlab = "Males Age Groups: 51+", ylab = "Expenditures")
+
 #Construct bar charts using Age Group as classes for the Expenditures for Females.
 barplot(dataF1$Expenditures,
         xlab = "Females Age Groups: 0-5",
@@ -83,16 +87,17 @@ barplot(dataF5$Expenditures,
 barplot(dataF6$Expenditures,
         xlab = "Females Age Groups: 51+",
         ylab = "Expenditures")
+
 #Subset the main data by Ethnicity
 data2_1 <- subset(data, Ethnicity == "American Indian")
 data2_2 <- subset(data, Ethnicity == "Asian")
 data2_3 <- subset(data, Ethnicity == "Black")
 data2_4 <- subset(data, Ethnicity == "Hispanic")
-26
 data2_5 <- subset(data, Ethnicity == "Multi Race")
 data2_6 <- subset(data, Ethnicity == "Native Hawaiian")
 data2_7 <- subset(data, Ethnicity == "Other")
 data2_8 <- subset(data, Ethnicity == "White not Hispanic")
+
 #subset your data by Gender
 dataM2_1 <- subset(data2_1, Gender == "Male")
 dataM2_2 <- subset(data2_2, Gender == "Male")
@@ -110,6 +115,7 @@ dataF2_5 <- subset(data2_5, Gender == "Female")
 dataF2_6 <- subset(data2_6, Gender == "Female")
 dataF2_7 <- subset(data2_7, Gender == "Female")
 dataF2_8 <- subset(data2_8, Gender == "Female")
+
 #Create bar charts using Ethnicity as classes for Males.
 barplot(dataM2_1$Expenditures,
         xlab = "Amercian Indian Males",
@@ -135,7 +141,7 @@ barplot(dataM2_7$Expenditures,
 barplot(dataM2_8$Expenditures,
         xlab = "White not Hispanic Males",
         ylab = "Expenditures")
-27
+
 #Create bar charts using Ethnicity as classes for Females.
 barplot(dataF2_1$Expenditures,
         xlab = "Amercian Indian Females",
